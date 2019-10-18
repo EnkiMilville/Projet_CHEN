@@ -2,7 +2,7 @@ ML
 	model = KNN
 	language = python
 	data = iris.csv
-	Y = species
+	Y = variety
 	keep = all
 	validation = train_test 
 	validation_param = 0.8 
