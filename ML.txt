@@ -1,0 +1,10 @@
+ML
+	model = decision_tree
+	language = python
+	data = iris.csv
+	Y = variety
+	keep = all
+	validation = train_test #cross
+	validation_param = 0.9 #10
+	output = accuracy  
+
