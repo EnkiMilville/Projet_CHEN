@@ -1,0 +1,9 @@
+ML
+	model = decision_tree
+	language = R
+	data = iris.csv
+	Y = species
+	keep = all
+	validation = train_test 
+	validation_param = 0.9 
+	output_name = iris_DT
