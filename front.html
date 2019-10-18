@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href ="styleAjout.css" />
+        <title> Ajout d'une annonce </title>
+    </head>
+    <body>
+        <header>
+
+
+            <form method="post" action="traitement_ajout.py">
+                <fieldset>
+                    <legend>Description</legend>
+                    <div id="blockName">
+
+                        <p>
+                            <label for="nom">Nom de l'objet* :</label>
+                            <input type="text" name="nom" id="nom" autofocus required placeholder="Ex : Canapé" />
+                        </p>
+
+                    </div>
+
+                    
+
+                     <div id="blockPrix">
+                        <p>
+                            <label for="prix">Prix* :</label>
+                            <input type="text" name="prix" id="prix" maxlength="4" required/>
+                        </p>
+                        <p id="don">
+                            <em>Indiquez 0 si vous voulez donner l'objet.</em>
+                        </p>
+
+
+
+                    </div>
+
+                     <div id="DimensionBlock">
+                        <p>
+                            <label for="longeur">Longeur :</label>
+                            <input type="text" name="longeur" id="longeur" maxlength="3" />
+                        </p>
+                        <p>
+                            <label for="largeur">Largeur :</label>
+                            <input type="text" name="largeur" id="largeur" maxlength="3" />
+                        </p>
+                        <p>
+                            <label for="hauteur">Hauteur :</label>
+                            <input type="text" name="hauteur" id="hauteur" maxlength="3" />
+                        </p>
+                        
+
+                    </div>
+
+                    <div id="StateBlock">
+                        <p>
+                            <label for="state">Etat de l'objet :</label>
+                            <select name="state" id="state">
+                                <option value="Sélectionner...">Sélectionner...</option>
+                                <option value="Quasiment neuf">Quasiment neuf</option>
+                                <option value="Bon">Bon</option>
+                                <option value="Moyen">Moyen</option>
+                                <option value="A retaper">A retaper</option>
+                            </select>
+
+                        </p>
+                        
+                    </div>
+
+                    <div id="DispoBlock">
+                        <p>
+                            <label for="DateDispo">Disponible à partir du :</label>
+                            <input type="text" name="DateDispo" id="DateDispo" maxlength="8" placeholder=" JJ/MM/AA" />
+                        </p>
+
+                        
+                    </div>
+
+
+                    <div id="blockDescAnnonce">
+                        <p id="paragrapgeDescAnnonce">
+                            <label id= "desclabel"for="desc"> Description de l'annonce :</label>
+                            <textarea name="desc" id="desc" maxlength="160" placeholder="Maximum 160 caractères." rows="4" cols="40"></textarea>
+                        </p>
+                        
+                    </div>
+
+
+                    <div id="blockPhotoPrinc">
+
+                        <p>
+                            <label for="photoPrinc">Photo principale* :</label>
+                            <input type="file" name="photoPrinc" id="photoPrinc" accept="image/png, image/jpeg"  required />
+                        </p>
+
+
+                    </div>
+
+                    <div id="blockPhotoSupp">
+
+                        <p>
+                            <label for="photoSupp">Photos supplémentaires :</label>
+                            <input type="file" name="photoSupp" id="photoSupp" accept="image/png, image/jpeg" multiple/>
+                        </p>
+
+                        
+
+
+                    <p>
+                        <em>*Champs obligatoires</em>
+                    </p>
+
+                    <div id="ChoixAdresseEnvoiMail">
+                        <p>
+                            <label for="choixAdresse"> Je veux que les messages des utilisateurs envoyés via le site soit envoyés vers mon adresse mail </label>
+                            <select name="choixAdresse" id="choixAdresse">
+                                <option value="Sélectionner...">Sélectionner...</option>
+                                <option value="de l'ENSAI">de l'ENSAI</option>
+                                <option value="personnelle">personnelle</option>
+                            </select>
+
+                        </p>
+                        
+                    </div>
+
+                    <div id="ChoixAdresseEnvoiMail">
+                        <p>
+                            <input type="checkbox" id="MailEnsai" name="MailEnsai"  required>
+                            <label for="MailEnsai"> J'accepte que mon adresse mail de l'ENSAI soit visible sur cette annonce</label>                       
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="MailPerso" name="MailPerso" >
+                            <label for="MailPerso">J'accepte que mon adresse mail personnelle soit visible sur cette annonce</label>                       
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="tel" name="tel" >
+                            <label for="tel">J'accepte que mon numéro de téléphone soit visible sur cette annonce</label>
+
+                        </p>
+
+
+                    </div>
+
+
+
+
+                    <p id="button">
+                        <input  type="submit" value="Déposer l'annonce" id="AjoutButton" >
+                    </p>
+                </fieldset>
+                
+            </form>
+
+
+            
+
+            <footer>
+                <a href="facebook.jpg"><img src="facebook.jpg" alt="Facebook Logo" /></a>
+            </footer>
+
+
+
+
+        </div>
+    </body>
+</html>
