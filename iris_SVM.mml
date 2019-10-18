@@ -1,0 +1,11 @@
+#
+
+ML
+	model = SVM
+	language = python
+	data = iris.csv
+	Y = variety
+	keep = sepal-width
+	validation = cross 
+	validation_param = 10
+	output_name = iris_SVM
