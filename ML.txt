@@ -4,7 +4,17 @@ ML
 	data = iris.csv
 	Y = variety
 	keep = all
-	validation = train_test #cross
-	validation_param = 0.9 #10
+	validation = train_test 
+	validation_param = 0.9 
 	output = accuracy  
+
+ML
+	model = SVM
+	language = python
+	data = iris.csv
+	Y = variety
+	keep = all
+	validation = cross 
+	validation_param = 10
+	output = balanced_accuracy  
 
