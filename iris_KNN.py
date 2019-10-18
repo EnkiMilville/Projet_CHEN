@@ -1,7 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn import tree
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 
 # Using pandas to import the dataset
 df = pd.read_csv("iris.csv")
@@ -21,7 +22,7 @@ y = df["variety"]
 
 
 # Spliting dataset into training set and test set
-test_size = 0.3
+test_size = 0.2
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
 
 # scikit-learn train_test_split :
@@ -31,18 +32,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
 
 
 # Set algorithm to use
-clf = tree.DecisionTreeClassifier()
+neigh = KNeighborsClassifier(n_neighbors=5)
 
-# scikit-learn DecisionTreeClassifier :
-#     https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
-# Other scikit-learn tree algorithms :
-#     https://scikit-learn.org/stable/modules/classes.html#module-sklearn.tree
 
-# Use the algorithm to create a model with the training set
-clf.fit(X_train, y_train)
+neigh.fit(X_train, y_train)
 
 # Compute and display the accuracy
-accuracy = accuracy_score(y_test, clf.predict(X_test))
+accuracy = accuracy_score(y_test, neigh.predict(X_test))
 
 print(accuracy)
 
@@ -50,4 +46,5 @@ print(accuracy)
 #     https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html
 # Other scikit-learn metrics :
 #     https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
-
+confus_matrice = confusion_matrix(y_test, neigh.predict(X_test))
+print(confus_matrice)

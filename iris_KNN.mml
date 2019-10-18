@@ -1,0 +1,9 @@
+ML
+	model = KNN
+	language = python
+	data = iris.csv
+	Y = variety
+	keep = all
+	validation = train_test 
+	validation_param = 0.8 
+	output_name = iris_KNN
